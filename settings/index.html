@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trello Helper Settings</title>
+    <link rel="stylesheet" href="css/foundation.css"/>
+    <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+<div class="row">
+    <div class="large-12 columns">
+        <h1>Trello Helper Settings</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel" id="trello_helper_loggedout" style="display: none">
+            <p>To get going, you'll need to authorize the extension to use your Trello account.</p>
+
+            <p>Do it by clicking the big Authorize button below.</p>
+
+            <a href="#" class="medium success button" id="trello_helper_login">Authorize</a><br/>
+        </div>
+        <div class="panel" id="trello_helper_loggedin" style="display: none">
+            <p>You are already authorized. If something doesn't work, try logging out using the button below, and logging back in.</p>
+
+            <a href="#" class="medium success button" id="trello_helper_logout">Log out</a><br/>
+        </div>
+
+    </div>
+</div>
+
+<script src="../scripts/key.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="../lib/trello_client.js"></script>
+<script src="../lib/hashSearch.js"></script>
+<script src="js/settings.js"></script>
+</body>
+</html>

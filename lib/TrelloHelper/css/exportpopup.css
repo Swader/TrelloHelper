@@ -1,0 +1,34 @@
+.trello_helper_export_popup {
+    background-color: white;
+    z-index: 1000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Yep! */
+    width: 48%;
+    min-height: 50%;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    border-bottom-color: #c2c2c2;
+    box-shadow: 0 1px 6px rgba(0,0,0,.15);
+}
+
+.trello_helper_export_popup_body {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+}
+
+.trello_helper_export_popup .button {
+    margin: 10px;
+}
+
+.trello_helper_export_popup .button .right {
+    float: right;
+}
+
+.trello_helper_export_popup textarea {
+    height: 100%;
+}
