@@ -14,7 +14,7 @@ This extension was originally written as a tutorial for SitePoint, but has since
 
 ## License
 
-See [license.md](license.md).
+See [LICENSE.md](LICENSE.md).
 
 ## Interested parties can:
 
