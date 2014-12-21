@@ -12,15 +12,8 @@ To clean and/or edit the JSON, use tools like [JSON Editor Online](http://jsoned
 
 This extension was originally written as a tutorial for SitePoint, but has since evolved and I'll gladly look at PRs if you have any. The only rule is - no JS frameworks. AngularJS and the like are a big no-no.
 
+For a list of outstanding todos, see the bottom of the [CHANGELOG](CHANGELOG.md).
+
 ## License
 
 See [LICENSE.md](LICENSE.md).
-
-## Interested parties can:
-
-- replace icon
-- re-implement popup with React?
-- fix issues as laid out in tutorial
-- add field selector for output (customization of output)
-- add more output formats
-- add "Download as file" option

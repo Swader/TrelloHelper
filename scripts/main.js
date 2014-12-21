@@ -1,29 +1,27 @@
 var tep = new TrelloExportPopup();
 
-chrome.extension.sendMessage({}, function (response) {
-    var readyStateCheckInterval = setInterval(function () {
-        if (document.readyState === "complete") {
-            clearInterval(readyStateCheckInterval);
+var tui = new TrelloUI({
+        dispatchListsReady: true
+    });
 
-            console.log("Init launched");
+chrome.extension.sendMessage({}, function (response) {});
 
-            var popover = $(".pop-over");
+document.addEventListener('trelloui-listsready', function() {
+    var popover = $(".pop-over");
 
-            tep.init();
+    tep.init();
 
-            $('.list-header-menu-icon').click(function (event) {
-                var popover_summoned_interval = setInterval(function () {
-                    if ($(popover).is(':visible')) {
-                        clearInterval(popover_summoned_interval);
-                        $(".pop-over .content").append('<hr><ul class="pop-over-list"> <li><a class="js-export-list" href="#">Export This List</a></li> </ul>');
-                        $(".js-export-list").click(function (e) {
-                            exportList(event);
-                        });
-                    }
-                }, 50);
-            });
-        }
-    }, 10);
+    $('.list-header-menu-icon').click(function (event) {
+        var popover_summoned_interval = setInterval(function () {
+            if ($(popover).is(':visible')) {
+                clearInterval(popover_summoned_interval);
+                $(".pop-over .content").append('<hr><ul class="pop-over-list"> <li><a class="js-export-list" href="#">Export This List</a></li> </ul>');
+                $(".js-export-list").click(function (e) {
+                    exportList(event);
+                });
+            }
+        }, 50);
+    });
 });
 
 function exportList(event) {
